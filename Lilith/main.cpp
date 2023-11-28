@@ -22,7 +22,8 @@
 
 void testMB(std::string s)		//TEST FUNCTION
 {
-	MessageBox(0, s.c_str(), "THIS IS A TEST", 0);
+	MessageBox(0, s.c_str(), "ƒeƒXƒg", 0);
+	
 }
 
 //END TESTFUNC
