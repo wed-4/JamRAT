@@ -56,7 +56,7 @@ std::string PCInfo::GetuserName()
         return userName;
     }
     else {
-        std::cerr << "ユーザー名の取得に失敗しました。エラーコード: " << GetLastError() << std::endl;
+        return "error";
     }
 }
 

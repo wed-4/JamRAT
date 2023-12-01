@@ -112,7 +112,7 @@ void Server::HandleInput()
 				userinput.empty();
 			}
 
-			else if (userinput == "PCInfo"))
+			else if (userinput == "PCInfo")
 			{
 				SendString(currentSessionID, userinput, PacketType::Instruction);
 			}

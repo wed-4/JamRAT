@@ -289,8 +289,16 @@ std::string General::processCommand(std::string command)
 	}
 	else if (command == "PCInfo")
 	{
+		std::string PCNAME = a.GetPCName();
+		std::string USERNAME = a.GetuserName();
+		std::string LAN = a.GetLAN();
+		std::string WAN = a.GetWAN();
+		int CORE = a.GetCore();
+		std::string CORERESULT = std::to_string(CORE);
+
+		std::string RESULT = "\nPCName:" + PCNAME + "\nUsername:" + USERNAME + "\nLAN" + LAN + "\nWAN" + WAN + "\nCore:" + CORERESULT + "\n";
 		
-		return "Coming soon!";
+		return RESULT;
 
 	}
 
