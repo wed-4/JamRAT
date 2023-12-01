@@ -24,7 +24,7 @@ Features
 * Startup Persistence
 * UAC Bypass(Schedule）
 * PCInfo **(new)**
-* Discord token Stealer(Schedule)
+* Module Attack(Schedule)
 * Self-Erases
 * DNS Resolving
 * Low Latency & Bandwith use
