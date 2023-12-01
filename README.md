@@ -45,6 +45,7 @@ Commands
 |switchSession|`switchSession <clientID>` (`switchSession 2`)|Switches to another Client|
 |broadcast|`broadcast`|Broadcasts your commands to all clients|
 |keydump|`keydump`|Dumps Keylog File|
+|PCInfo|`PCInfo`|Information about target PC|
 |script|`script <scriptname> <scriptparameter>` (`script keydump keylog.txt`)|Executes a predefined Script|
 |listClients|`listClients`|Displays the number of clients connected|
 |remoteControl|`remoteControl <C:\program.exe>` OR `remoteControl cmd`|[More Info](#remotecontrol)|
