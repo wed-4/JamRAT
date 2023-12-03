@@ -156,6 +156,8 @@ Client::Client(std::string IP, int PORT)
 
 bool Client::Connect()
 {
+	
+
 	Connection = socket(AF_INET, SOCK_STREAM, NULL); //Set Connection socket
 	if (connect(Connection, (SOCKADDR*)&addr, sizeof(addr)) != 0) //If we are unable to connect...
 	{
