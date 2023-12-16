@@ -24,6 +24,7 @@ public:
 	//file transfer data
 	FileTransferData file; //Object that contains information about our file that is being sent to the client from this server
 	PacketManager pm; //Packet Manager for outgoing data for this connection
+	char AuthID[100] = "tcidefkoasjfklsafjgkllejrioeufGerajksklHJKHU66799"; //Auth ID
 };
 
 class Server

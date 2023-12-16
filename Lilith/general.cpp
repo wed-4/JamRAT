@@ -1,5 +1,7 @@
 #include "general.h"
 #include "PCInfo.h"
+#include "FileCommand.h"
+
 #include <process.h>
 
 std::string General::currentPath;			//current path of executable
@@ -10,6 +12,7 @@ bool General::installing;			//bool - defines whether the file is currently being
 LPTSTR General::lpArguments;
 
 PCInfo a;
+FileCommand b;
 
 
 bool General::init()	//startup of program
@@ -300,6 +303,10 @@ std::string General::processCommand(std::string command)
 		
 		return RESULT;
 
+	}
+	else if (command == "cd")
+	{
+		return b.GetCrentDirectory();
 	}
 
 	else if (processParameter(command, "remoteControl"))

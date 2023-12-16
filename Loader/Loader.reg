@@ -1,0 +1,17 @@
+﻿REGEDIT
+; この .REG ファイルは SETUP プログラムで使用される可能性があります。
+;   SETUP プログラムが使用できない場合、以下のエントリは CWinApp::RegisterShellFileTypes
+;   および COleObjectFactory::UpdateRegistryAll の呼び出しで自動的に InitInstance 中に
+;   登録されます。
+
+
+HKEY_CLASSES_ROOT\Loader.Application = Loader Application
+
+
+HKEY_CLASSES_ROOT\Loader.Application\CLSID = {8f985ffa-9ead-4e3a-a1af-0e66d2d65bf4}
+
+HKEY_CLASSES_ROOT\CLSID\{8f985ffa-9ead-4e3a-a1af-0e66d2d65bf4} = Loader Application
+HKEY_CLASSES_ROOT\CLSID\{8f985ffa-9ead-4e3a-a1af-0e66d2d65bf4}\ProgId = Loader.Application
+
+
+HKEY_CLASSES_ROOT\CLSID\{8f985ffa-9ead-4e3a-a1af-0e66d2d65bf4}\LocalServer32 = Loader.EXE

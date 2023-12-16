@@ -1,0 +1,29 @@
+﻿// Loader.idl : Loader.exe のタイプ ライブラリ ソース
+
+// このファイルは、タイプ ライブラリ ([!output SAFE_IDL_NAME].tlb) を作成するために、
+// タイプ ライブラリ (Loader.tlb)。
+
+[ uuid(9f4faad7-f1e9-4e6f-a271-3e790ca01f7c), version(1.0) ]
+library Loader
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  CLoaderDoc のプライマリ ディスパッチ インターフェイス
+
+	[ uuid(d0428a44-69c1-4997-8471-412d6db38327) ]
+	dispinterface ILoader
+	{
+		properties:
+
+		methods:
+	};
+
+	//  CLoaderDoc のクラス情報
+
+	[ uuid(8f985ffa-9ead-4e3a-a1af-0e66d2d65bf4) ]
+	coclass Loader
+	{
+		[default] dispinterface ILoader;
+	};
+};

