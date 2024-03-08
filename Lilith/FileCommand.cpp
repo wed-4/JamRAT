@@ -8,3 +8,5 @@ std::string FileCommand::GetCrentDirectory()
     std::string currentPathString = path.string();
     return currentPathString;
 }
+
+

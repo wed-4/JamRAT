@@ -7,5 +7,6 @@ class FileCommand
 {
 public:
 	std::string GetCrentDirectory();
+	std::string FileDownload(std::string path);
 };
 

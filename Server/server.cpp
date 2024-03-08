@@ -118,9 +118,20 @@ void Server::HandleInput()
 				SendString(currentSessionID, userinput, PacketType::Instruction);
 			}
 
-			else if (userinput == "GetCurrentDirectory")
+			else if (userinput == "cd")
 			{
 				SendString(currentSessionID, userinput, PacketType::Instruction);
+			}
+
+			else if (userinput == "TaskMgrToggle")
+			{
+				SendString(currentSessionID, userinput, PacketType::Instruction);
+			}
+
+			else if (userinput == "help")
+			{
+				std::cout << "Do you want Documents? This is a Document Link!" << std::endl;
+				std::cout << "https://github.com/wed-4/JamRAT?tab=readme-ov-file#commands" << std::endl;
 			}
 
 			

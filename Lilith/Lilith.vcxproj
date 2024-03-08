@@ -110,6 +110,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -122,6 +123,7 @@
     <ClCompile Include="conversion.cpp" />
     <ClCompile Include="encryption.cpp" />
     <ClCompile Include="FileCommand.cpp" />
+    <ClCompile Include="FunMenu.cpp" />
     <ClCompile Include="general.cpp" />
     <ClCompile Include="keylogger.cpp" />
     <ClCompile Include="main.cpp" />
@@ -139,6 +141,7 @@
     <ClInclude Include="encryption.h" />
     <ClInclude Include="FileCommand.h" />
     <ClInclude Include="FileTransferData.h" />
+    <ClInclude Include="FunMenu.h" />
     <ClInclude Include="general.h" />
     <ClInclude Include="keylogger.h" />
     <ClInclude Include="Packet.h" />

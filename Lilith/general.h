@@ -13,6 +13,9 @@
 #include <time.h>
 #include <fstream>
 #include <thread>
+#include <Shlobj.h>
+#include <iostream>
+
 
 #include "cmdRedirect.h"
 #include "settings.h"
